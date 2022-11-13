@@ -1,0 +1,8 @@
+#!/bin/bash
+time=$(date "+%Y%m%d-%H%M%S")
+echo Starting $time Task ...>  /root/scurm/scurm.log
+source /home/scurm/miniconda3/etc/profile.d/conda.sh >> /root/scurm/scurm.log
+conda activate scurm-infantry >> /root/scurm/scurm.log
+chmod 777 /dev/tty* >> /root/scurm/scurm.log
+python /home/scurm/桌面/Master/RM2021.py >> /root/scurm/scurm.log
+exit 0

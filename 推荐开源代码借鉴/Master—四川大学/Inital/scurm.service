@@ -1,0 +1,13 @@
+[Unit]
+Description=SCURM Auto-Load Script
+
+[Service]
+Type=simple
+TimeoutStartSec=5min
+ExecStart=  /root/scurm/scurm.run
+ExecReload=/root/scurm/scurm.run
+ExecStop=  /root/scurm/scurm.ext
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
